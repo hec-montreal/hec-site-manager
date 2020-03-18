@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.sakaiproject</groupId>
+        <artifactId>master</artifactId>
+        <version>19.3</version>
+        <relativePath>../master/pom.xml</relativePath>
+    </parent>
+
+    <groupId>ca.hec.hec-site-manager</groupId>
+    <artifactId>hec-site-manager-base</artifactId>
+    <version>19.3</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>api</module>
+        <module>impl</module>
+        <module>tool</module>
+    </modules>
+
+    <name>hec-site-manager</name>
+    <description>An HEC tool for searching and managing course sites in Sakai</description>
+    <url>https://github.com/hec-montreal/hec-site-manager</url>
+    <inceptionYear>2020</inceptionYear>
+
+    <organization>
+        <name>HEC Montreal</name>
+        <url>http://www.hec.ca</url>
+    </organization>
+
+    <build>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <scriptSourceDirectory>src/main/scripts</scriptSourceDirectory>
+        <testSourceDirectory>src/test/java</testSourceDirectory>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+        <testResources>
+            <testResource>
+                <directory>src/test/resources</directory>
+            </testResource>
+        </testResources>
+        <plugins>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <warSourceDirectory>src/main/webapp</warSourceDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>ca.hec.hec-site-manager</groupId>
+                <artifactId>hec-site-manager-api</artifactId>
+                <version>${project.version}</version>
+                <scope>provided</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
