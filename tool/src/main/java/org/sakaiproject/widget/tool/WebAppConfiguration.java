@@ -31,7 +31,7 @@ public class WebAppConfiguration implements WebApplicationInitializer {
                         true,
                         "/*");
 
-        ServletRegistration.Dynamic servlet = servletContext.addServlet("sakai.widget", new DispatcherServlet(rootContext));
+        ServletRegistration.Dynamic servlet = servletContext.addServlet("sakai.hec-site-manager", new DispatcherServlet(rootContext));
         servlet.addMapping("/");
         servlet.setLoadOnStartup(1);
     }
