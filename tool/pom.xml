@@ -75,4 +75,17 @@
 			<version>3.0.4.RELEASE</version>
 		</dependency>
 	</dependencies>
+<!--
+    <build>
+        <plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<warSourceDirectory>${basedir}/src/main/webapp/dist</warSourceDirectory>
+				</configuration>
+			</plugin>
+	      </plugins>
+    </build>		
+	-->
 </project>

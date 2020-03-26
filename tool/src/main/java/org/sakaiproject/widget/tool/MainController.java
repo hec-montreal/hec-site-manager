@@ -85,7 +85,7 @@ public class MainController {
 		model.addAttribute("widgets", widgetService.getWidgetsForSiteWithStatus(context));
 	    return "index";
 	}
-
+/*
 	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public String pageAdd(Model model) {
 		log.debug("page Add");
@@ -146,7 +146,7 @@ public class MainController {
         }
 	    return "redirect:/index";
 	}
-
+*/
     /**
      * Check for a valid session
      * if not valid a 403 Forbidden will be returned
