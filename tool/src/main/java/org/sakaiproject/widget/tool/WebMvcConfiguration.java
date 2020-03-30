@@ -74,6 +74,7 @@ public class WebMvcConfiguration extends WebMvcConfigurerAdapter implements Appl
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/static/**").addResourceLocations("/WEB-INF/dist/static/");
         registry.addResourceHandler("/css/**").addResourceLocations("classpath:/css/");
         registry.addResourceHandler("/icons/**").addResourceLocations("classpath:/icons/");
         super.addResourceHandlers(registry);
