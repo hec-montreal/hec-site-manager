@@ -5,8 +5,8 @@
   "author": "Curtis Van Osch <curtis.van-osch@hec.ca>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.prod.conf.js",
+    "start": "npm run prod",
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js"
   },
