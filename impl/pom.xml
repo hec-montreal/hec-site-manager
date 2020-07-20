@@ -8,7 +8,7 @@
     <parent>
         <groupId>ca.hec.hec-site-manager</groupId>
         <artifactId>hec-site-manager-base</artifactId>
-        <version>19.3</version>
+        <version>19.4</version>
     </parent>
 
     <artifactId>hec-site-manager-impl</artifactId>

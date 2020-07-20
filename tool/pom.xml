@@ -4,7 +4,7 @@
    	 <parent>
         	<groupId>ca.hec.hec-site-manager</groupId>
         	<artifactId>hec-site-manager-base</artifactId>
-        	<version>19.3</version>
+        	<version>19.4</version>
     	</parent>
 
 	<artifactId>hec-site-manager-tool</artifactId>
@@ -84,32 +84,35 @@
  				<configuration>
 					<workingDirectory>src/main/webapp/src</workingDirectory>
 				</configuration>
-    
-                <executions>
-                    <execution>
-                        <id>install-node-and-npm</id>
-                        <goals>
-                        	<goal>install-node-and-npm</goal>
-                        </goals>
-                        <phase>generate-resources</phase>                                     
-		                <configuration>
-		                    <nodeVersion>v11.2.0</nodeVersion>
-		                    <npmVersion>6.4.1</npmVersion>
-		                </configuration>		 
-                    </execution>
-    
-                    <execution>
-                        <id>npm-install</id>
-                        <goals><goal>npm</goal></goals>
-    
-                    <execution>
-                        <id>webpack-build</id>
-                        <goals><goal>npm</goal></goals>
-                        <configuration>
-                            <arguments>run build</arguments>
-                        </configuration>
-                    </execution>
-                </executions>
+			
+				<executions>
+					<execution>
+						<id>install-node-and-npm</id>
+						<goals>
+							<goal>install-node-and-npm</goal>
+						</goals>
+						<phase>generate-resources</phase>
+						<configuration>
+							<nodeVersion>v11.2.0</nodeVersion>
+							<npmVersion>6.4.1</npmVersion>
+						</configuration>
+					</execution>
+					<execution>
+						<id>npm-install</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>webpack-build</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<configuration>
+							<arguments>run build</arguments>
+						</configuration>
+					</execution>
+				</executions>
             </plugin>
 	      </plugins>
     </build>		

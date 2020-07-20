@@ -7,13 +7,13 @@
     <parent>
         <groupId>org.sakaiproject</groupId>
         <artifactId>master</artifactId>
-        <version>19.3</version>
+        <version>19.4</version>
         <relativePath>../master/pom.xml</relativePath>
     </parent>
 
     <groupId>ca.hec.hec-site-manager</groupId>
     <artifactId>hec-site-manager-base</artifactId>
-    <version>19.3</version>
+    <version>19.4</version>
     <packaging>pom</packaging>
 
     <modules>
